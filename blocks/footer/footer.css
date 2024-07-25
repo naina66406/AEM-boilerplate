@@ -1,6 +1,7 @@
 footer {
   padding: 2rem;
-  background-color: var(--light-color);
+  /* background-color: var(--light-color); */
+  background-color: var(--color-202020);
   font-size: var(--body-font-size-s);
 }
 
@@ -9,6 +10,62 @@ footer .footer {
   margin: auto;
 }
 
-footer .footer p {
-  margin: 0;
+
+
+
+footer p{
+  color: var(--color-f7f7f7);
+  font-size: var(--body-font-size-12);
+}
+
+footer ul{
+  padding: none;
+  list-style: none;
+  display: flex;
+  color: var(--color-f7f7f7);
+
+}
+footer ul li{
+  padding: 0px 10px;
+
+}
+footer ul li code{
+  font-size: var(--body-font-size-14);
+}
+footer ul li:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+footer p a:any-link {
+  color:var(--color-f7f7f7);
+  text-decoration: underline;
+}
+footer .columns-img-col{
+  flex: 0 0 auto!important;
+}
+/* css by me */
+footer .columns-img-col p{
+  display: flex;
+  align-items: end;
+}
+
+footer .columns-img-col strong{
+  margin-right: 15px;
+}
+
+
+
+footer .columns-img-col p picture img{
+  height: 30px !important;
+  width: 30px !important;
+}
+footer img{
+  width: 128px !important;
+  height: 48px !important;
+}
+
+
+footer .columns-img-col p picture{
+  background: #fff;
+  padding: 10px 10px;
 }
