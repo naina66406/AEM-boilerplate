@@ -231,15 +231,23 @@ h2{
 
 @media (width >= 600px) {
   main .section {
-    /* padding: 64px 32px; */
     padding: 30px 32px;
+  }
+}
+@media (width < 600px) {
+  main .section {
+    padding: 15px 16px;
+  }
+  
+
+  main .columns.highlight div div:nth-child(2){
+    padding: 20px;
   }
 }
 
 @media (width >= 900px) {
   .section > div {
     max-width: 1200px;
-    margin: auto;
   }
 }
 
@@ -249,7 +257,7 @@ main .columns.highlight {
   background-color: var(--light-color);
 }
 main .columns.highlight div div:nth-child(2){
-  padding-right: 30px;
+  padding: 0px 30px;
 }
 
 .section.columns-container div p strong a{

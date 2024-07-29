@@ -19,7 +19,7 @@ footer p{
 }
 
 footer ul{
-  padding: none;
+  padding: 0px;
   list-style: none;
   display: flex;
   color: var(--color-f7f7f7);
@@ -68,4 +68,12 @@ footer img{
 footer .columns-img-col p picture{
   background: #fff;
   padding: 10px 10px;
+}
+@media (width < 600px) {
+footer{
+  margin-top: 20px;
+}
+  footer ul li{
+padding: 0px 5px;
+  }
 }

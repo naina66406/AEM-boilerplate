@@ -36,18 +36,16 @@ header nav[aria-expanded='true'] {
     padding: 0 2rem;
   }
 }
-
-@media (width >= 900px) {
-  header nav {
-    display: flex;
-    justify-content: space-between;
+@media (width < 600px) {
+  header nav{
+    gap: 10px;
   }
-
-  header nav[aria-expanded='true'] {
-    min-height: 0;
-    overflow: visible;
+  header{
+    height: 110px;
   }
 }
+
+
 
 header nav p {
   margin: 0;
@@ -131,12 +129,12 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
   bottom: 3px;
   transform: rotate(-45deg);
 }
+@media (width < 900px) {
 
-@media (width >= 900px) {
-  header nav .nav-hamburger {
-    display: none;
-    visibility: hidden;
-  }
+header nav[aria-expanded='true'] .nav-sections {
+
+  flex-direction: row!important;
+}
 }
 
 /* brand */
@@ -176,16 +174,17 @@ h3#featured-article{
   transform: rotate(90deg);
 }
 
-.section.search-container.nav-sections .search-wrapper{
-  width: 166px;
+.section.search-container .search-wrapper{
+  width: 169px;
   background: #ebebeb8a;
+  height: 41px;
 }
 
 .section.search-container.nav-sections .search-wrapper .search .search-box{
   grid-template-columns: 1fr!important;
 }
 
-.section.search-container.nav-sections .search-wrapper .search.block input{
+.section.search-container .search-wrapper .search.block input{
   border: 1px solid transparent;
   background: none;
   text-transform: uppercase;
@@ -205,12 +204,14 @@ header nav .nav-sections {
   display: none;
   visibility: hidden;
   background-color: var(--overlay-color);
+ 
 }
 
 header nav[aria-expanded='true'] .nav-sections {
-  display: block;
+  display: flex;
   visibility: visible;
   align-self: start;
+  flex-direction: row-reverse;
 }
 
 header nav .nav-sections ul {
@@ -242,8 +243,21 @@ header nav .nav-sections ul > li > ul > li {
 }
 
 @media (width >= 900px) {
+  header nav .nav-hamburger {
+    display: none;
+    visibility: hidden;
+  }
+  header nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header nav[aria-expanded='true'] {
+    min-height: 0;
+    overflow: visible;
+  }
   header nav .nav-sections {
-    display: block;
+    display: flex;
     visibility: visible;
     white-space: nowrap;
   }

@@ -17,17 +17,34 @@
 
 .columns > div > .columns-img-col img {
   display: block;
+  object-fit: cover;
 }
 
 @media (width >= 900px) {
   .columns > div {
     align-items: center;
     flex-direction: unset;
-    gap:70px;
+    gap:20px;
   }
 
   .columns > div > div {
     flex: 1;
     order: unset;
   }
+}
+@media (width < 900px  ) {
+ 
+  .columns > div > .columns-img-col img{
+    aspect-ratio: 1;
+  }
+}
+
+@media (width < 600px) {
+  .columns.highlight  > div{
+    flex-direction: column-reverse;
+  }
+  .columns > div > .columns-img-col img{
+    aspect-ratio: 1;
+  }
+
 }
